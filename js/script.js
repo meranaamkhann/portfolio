@@ -37,3 +37,26 @@ window.addEventListener('scroll', () => {
     a.style.color = a.getAttribute('href') === '#'+cur ? 'var(--text)' : '';
   });
 });
+
+// contact info form
+emailjs.init("ejycJ_SHqqNxyHzaV");
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+emailjs.sendForm(
+"service_x45q6cr",
+"template_5e5bomu",
+this
+)
+ .then(() => {
+    alert("✅ Thanks! Your message has been sent. I'll get back to you soon.!");
+    form.reset();
+  })
+  .catch((error) => {
+    alert("❌ Failed to send message.");
+    console.error(error);
+  });
+});
