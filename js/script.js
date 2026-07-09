@@ -21,6 +21,23 @@ document.querySelectorAll('a,button,.stag,.scard,.pcard,.acard,.cert,.clink').fo
   });
 });
 
+// Floating description 
+new Typed("#typing", {
+    strings: [
+        "Backend Developer",
+        // "Java Developer",
+        // "Spring Boot Developer",
+        // "Problem Solver",
+        "Freelancer"
+    ],
+    typeSpeed: 70,
+    backSpeed: 45,
+    backDelay: 1800,
+    loop: true,
+    showCursor: true,
+    cursorChar: "|"
+});
+
 // scroll reveal
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('up'); });
