@@ -64,9 +64,21 @@ nav{
 
 /* ── HERO ── */
 .hero{
-  min-height:100vh;padding:160px 64px 100px;
-  position:relative;overflow:hidden;
-  display:flex;flex-direction:column;justify-content:center;
+    min-height:100vh;
+
+    padding:100px 80px 40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+
+
+    position:relative;
+
+    overflow:hidden;
 }
 .hero-bg-lines{
   position:absolute;inset:0;pointer-events:none;opacity:0.03;
@@ -79,6 +91,55 @@ nav{
   position:absolute;top:10%;left:10%;width:700px;height:700px;
   background:radial-gradient(ellipse,rgba(0,229,255,0.04) 0%,transparent 65%);
   pointer-events:none;
+}
+.hero-top{
+    display:grid;
+    grid-template-columns:1fr 360px;
+    /* align-items:center; */
+    gap:30px;
+    max-width:1180px;
+    width:100%;
+    margin:0 auto;
+}
+
+.hero-text{
+    max-width:650px;
+}
+
+.hero-photo-wrap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.hero-photo-frame{
+    position:relative;
+    width:360px;
+    height:430px;
+    border-radius:28px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    background:#111;
+}
+
+.hero-photo{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+.hero-photo-glow{
+    position:absolute;
+    width:420px;
+    height:420px;
+
+    background:
+    radial-gradient(circle,
+    rgba(0,229,255,.14),
+    transparent 70%);
+
+    filter:blur(45px);
+
+    z-index:-1;
 }
 .status-pill{
   display:inline-flex;align-items:center;gap:8px;
@@ -334,6 +395,8 @@ CARD
     opacity:0;
 
     transition:.35s;
+
+    pointer-events:none;
 
 }
 
